@@ -11,14 +11,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onClick(View view){
-
         TextView content = findViewById(R.id.editTextCurrencyInput);
+       double valueToConvert = Double.valueOf(content.getText().toString());
+       double convertedValueInUSD = 1.15 * valueToConvert;
 
-
-        Toast.makeText(this, String.valueOf(content),Toast.LENGTH_LONG).show();
-
-        Log.i("info","testing");
-
+       Toast.makeText(this, Double.toString(convertedValueInUSD),Toast.LENGTH_LONG).show();
 
     }
 
