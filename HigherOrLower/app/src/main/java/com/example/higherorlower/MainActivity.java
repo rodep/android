@@ -15,16 +15,14 @@ public class MainActivity extends AppCompatActivity {
 
 /* edit field created for manipulation, random number created. Test if random number works. */
 
-    public  void guessNumber(View view){
+    public  void onClick(View view){
 
         Random rand = new Random();
         int randomNum = rand.nextInt((20 - 1) + 1) + 1;
 
         EditText guessedNumberField = (EditText) findViewById(R.id.editTextGuessNumber);
-
-      // Toast.makeText(getApplicationContext(), randomNum.toString(), Toast.LENGTH_LONG).show();
-
-
+        System.out.println(randomNum); // random number generating successfully
+        
 
     }
 
