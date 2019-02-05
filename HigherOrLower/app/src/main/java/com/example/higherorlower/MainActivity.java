@@ -13,24 +13,39 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
 
-/* edit field created for manipulation, random number created. Test if random number works. */
 
     public  void onClick(View view){
 
-        Random rand = new Random();
-        int randomNum = rand.nextInt((20 - 1) + 1) + 1;
 
-        EditText guessedNumberField = (EditText) findViewById(R.id.editTextGuessNumber);
-        System.out.println(randomNum); // random number generating successfully
+        int randomNum = generateRandomNumber();
+
+        EditText guessedNumberField;
+        guessedNumberField = findViewById(R.id.editTextGuessNumber);
         
 
+
     }
 
 
+    public int generateRandomNumber(){
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        Random rand = new Random();
+        int randomNum = rand.nextInt((20 - 1) + 1) + 1;
+        System.out.println(randomNum);
+
+        return randomNum;
     }
-}
+
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+
+            EditText guessedNumberField;
+        }
+
+
+
+    }
+
