@@ -8,13 +8,10 @@
         import java.util.Random;
 
 
-
         public class MainActivity extends AppCompatActivity {
 
             Random rand = new Random();
             Integer randNum = rand.nextInt((20 - 1) + 1) + 1;
-
-
 
 
             // first issue: use the random number only one time and then guess : FIXED
@@ -49,8 +46,6 @@
                 System.out.println("end of for loop");
 
             }
-
-
                 @Override
                 protected void onCreate(Bundle savedInstanceState) {
                     super.onCreate(savedInstanceState);
